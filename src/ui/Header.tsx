@@ -1,13 +1,28 @@
 import React, { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   const gitHandleClick = useCallback(() => {
     window.open("https://github.com/jominuk");
   }, []);
 
   const tHandleClick = useCallback(() => {
     window.open("https://minuk22.tistory.com/");
+  }, []);
+
+  const pageMove = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
+
+  const pageProject = useCallback(() => {
+    navigate("project");
+  }, [navigate]);
+
+  const pageIntro = useCallback(() => {
+    navigate("intro");
   }, []);
 
   return (
@@ -34,11 +49,11 @@ const Header = () => {
       </StContainer>
 
       <StTitleContainer>
-        <StTitleButton>Skill</StTitleButton>
+        <StTitleButton onClick={pageMove}>Skill</StTitleButton>
 
-        <StTitleButton>Project</StTitleButton>
+        <StTitleButton onClick={pageProject}>Projects</StTitleButton>
 
-        <StTitleButton>introduce</StTitleButton>
+        <StTitleButton onClick={pageIntro}>introduce</StTitleButton>
       </StTitleContainer>
     </>
   );

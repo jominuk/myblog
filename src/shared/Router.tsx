@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "src/ui/Layout";
 import Header from "src/ui/Header";
 import Skill from "src/page/Skill";
+import Project from "src/page/Project";
+import Introduce from "src/page/Introduce";
 
 const Router = () => {
   return (
@@ -10,7 +12,9 @@ const Router = () => {
       <Layout>
         <Header />
         <Routes>
-          <Route path="/123" element={<Skill />} />
+          <Route path="/" element={<Skill />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="/intro" element={<Introduce />} />
         </Routes>
       </Layout>
     </BrowserRouter>
