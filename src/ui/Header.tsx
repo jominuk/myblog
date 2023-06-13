@@ -23,7 +23,7 @@ const Header = () => {
 
   const pageIntro = useCallback(() => {
     navigate("intro");
-  }, []);
+  }, [navigate]);
 
   return (
     <>
@@ -80,13 +80,13 @@ const StButton = styled.button`
 `;
 
 const StTitleContainer = styled.div`
-  height: 40px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 10px 0px 20px;
   border-bottom: 1px solid white;
   color: white;
+  margin-bottom: 50px;
 `;
 
 const StTitleButton = styled.button`
