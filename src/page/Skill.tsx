@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { skilldata } from "src/type/type";
-import SkillModal from "src/components/SkillModal";
+import SkillModal from "src/modal/skillmodals/JavaModal";
 
 const Skill = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

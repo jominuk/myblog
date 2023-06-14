@@ -12,9 +12,9 @@ const Router = () => {
       <Layout>
         <Header />
         <Routes>
-          <Route path="/" element={<Skill />} />
+          <Route path="/skill" element={<Skill />} />
           <Route path="/project" element={<Project />} />
-          <Route path="/intro" element={<Introduce />} />
+          <Route path="/" element={<Introduce />} />
         </Routes>
       </Layout>
     </BrowserRouter>

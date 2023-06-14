@@ -13,16 +13,16 @@ const Header = () => {
     window.open("https://minuk22.tistory.com/");
   }, []);
 
-  const pageMove = useCallback(() => {
+  const pageIntro = useCallback(() => {
     navigate("/");
+  }, [navigate]);
+
+  const pageMove = useCallback(() => {
+    navigate("/skill");
   }, [navigate]);
 
   const pageProject = useCallback(() => {
     navigate("project");
-  }, [navigate]);
-
-  const pageIntro = useCallback(() => {
-    navigate("intro");
   }, [navigate]);
 
   return (
@@ -49,11 +49,11 @@ const Header = () => {
       </StContainer>
 
       <StTitleContainer>
+        <StTitleButton onClick={pageIntro}>Introduce</StTitleButton>
+
         <StTitleButton onClick={pageMove}>Skill</StTitleButton>
 
         <StTitleButton onClick={pageProject}>Projects</StTitleButton>
-
-        <StTitleButton onClick={pageIntro}>introduce</StTitleButton>
       </StTitleContainer>
     </>
   );
@@ -95,10 +95,11 @@ const StTitleButton = styled.button`
   text-transform: uppercase;
   position: relative;
   margin-left: 50px;
-  font-size: 15px;
+  font-size: 18px;
   background: none;
   border: none;
   color: white;
+  text-transform: capitalize;
   cursor: pointer;
   &:after {
     content: "";
