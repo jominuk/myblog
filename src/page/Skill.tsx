@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import SkillModal from "src/modal/skillmodals/JavaModal";
+// import SkillModal from "src/modal/skillmodals/JavaModal";
 
 const Skill = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleContainerClick = () => {
-    setIsModalOpen(!isModalOpen);
-  };
+  // const handleContainerClick = () => {
+  //   setIsModalOpen(!isModalOpen);
+  // };
 
   return (
     <>
-      <StTodoContainer onClick={handleContainerClick}>
+      <StTodoContainer
+      // onClick={handleContainerClick}
+      >
         <StConten>
           <StJava alt="JS" src={require("../image/JS.png")} />
           <StTitle>JavaScript</StTitle>
@@ -22,7 +24,7 @@ const Skill = () => {
         </StContents>
       </StTodoContainer>
 
-      {isModalOpen && <SkillModal setIsModalOpen={setIsModalOpen} />}
+      {/* {isModalOpen && <SkillModal setIsModalOpen={setIsModalOpen} />} */}
 
       <StTodoContainer>
         <StConten>
@@ -101,12 +103,11 @@ const StTodoContainer = styled.button`
   height: 7vh;
   border-radius: 12px;
   margin: auto;
-  margin-top: 20px;
-  background-color: rgba(183, 244, 242, 0.2);
+  margin-top: 30px;
+  background-color: rgba(183, 244, 242, 0.25);
   color: white;
-  cursor: pointer;
   &:hover {
-    transform: scale(1.06);
+    transform: scale(1.2);
     transition: all 0.3s;
   }
 `;

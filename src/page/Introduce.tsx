@@ -89,6 +89,8 @@ const StIntro = styled.div`
   margin: auto;
   border-radius: 20px;
   color: wheat;
+  font-size: 15px;
+  font-weight: 800;
 `;
 
 const StWhy = styled.h1`
