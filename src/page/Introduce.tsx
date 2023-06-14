@@ -84,20 +84,19 @@ export default Introduce;
 const StIntro = styled.div`
   display: flex;
   justify-content: center;
-
   text-align: center;
   background-color: rgba(255, 113, 175, 0.2);
   width: 70%;
   height: 300px;
   margin: auto;
   border-radius: 20px;
-  color: wheat;
   font-size: 15px;
   font-weight: 800;
 `;
 
 const StFont = styled.div`
   margin-top: 50px;
+  color: wheat;
 `;
 
 const StWhy = styled.h1`
