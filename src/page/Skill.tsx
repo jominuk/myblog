@@ -1,19 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-// import SkillModal from "src/modal/skillmodals/JavaModal";
 
 const Skill = () => {
-  // const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // const handleContainerClick = () => {
-  //   setIsModalOpen(!isModalOpen);
-  // };
-
   return (
     <>
-      <StTodoContainer
-      // onClick={handleContainerClick}
-      >
+      <StTodoContainer>
         <StConten>
           <StJava alt="JS" src={require("../image/JS.png")} />
           <StTitle>JavaScript</StTitle>
@@ -23,8 +14,6 @@ const Skill = () => {
           문법을 이해하고 있습니다.
         </StContents>
       </StTodoContainer>
-
-      {/* {isModalOpen && <SkillModal setIsModalOpen={setIsModalOpen} />} */}
 
       <StTodoContainer>
         <StConten>

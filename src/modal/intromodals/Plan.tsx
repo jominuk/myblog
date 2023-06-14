@@ -98,8 +98,8 @@ const StRigth = styled.div`
 const StSpan = styled.div`
   display: flex;
   margin: auto;
-  margin-top: 50px;
-  width: 80%;
+  margin-top: 120px;
+  width: 60%;
   color: black;
   font-size: 16px;
   font-weight: 900;
