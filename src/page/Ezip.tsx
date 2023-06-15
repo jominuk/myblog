@@ -43,4 +43,7 @@ const StTime = styled.div`
 
 const StLink = styled.div`
   color: white;
+  border-bottom: 1px solid powderblue;
+  width: 120px;
+  cursor: pointer;
 `;
