@@ -5,6 +5,7 @@ import Header from "src/ui/Header";
 import Skill from "src/page/Skill";
 import Project from "src/page/Project";
 import Introduce from "src/page/Introduce";
+import Ezip from "src/page/Ezip";
 
 const Router = () => {
   return (
@@ -15,6 +16,7 @@ const Router = () => {
           <Route path="/skill" element={<Skill />} />
           <Route path="/project" element={<Project />} />
           <Route path="/" element={<Introduce />} />
+          <Route path="/ezip" element={<Ezip />} />
         </Routes>
       </Layout>
     </BrowserRouter>
