@@ -1,6 +1,5 @@
 import React, { useCallback } from "react";
 import styled from "styled-components";
-import { Scrollbars } from "react-custom-scrollbars";
 
 const Ezip = () => {
   const windowOpen = useCallback(() => {
