@@ -60,7 +60,16 @@ const Ezip = () => {
         <StPart>
           <img
             alt="ezip"
-            src={require("../ezipimage/카카오로그인.png")}
+            src={require("../ezipimage/kakaoLoginImage.png")}
+            className="loginimg"
+          />
+
+          <div> 여기는 상세 내용 </div>
+        </StPart>
+        <StPart>
+          <img
+            alt="ezip"
+            src={require("../ezipimage/kakaoLoginImage.png")}
             className="loginimg"
           />
 
