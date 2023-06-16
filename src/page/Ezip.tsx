@@ -86,8 +86,6 @@ const Ezip = () => {
 
         <StPart>
           <ReactPlayer
-            // alt="review"
-            // src={require("../ezipimage/review.mp4")}
             url="img/review.mp4"
             className="loginimg"
             width="400px"
@@ -99,11 +97,67 @@ const Ezip = () => {
           <StCon>
             <div className="BigTitle">🏠 Review 페이지 </div>
             <div>
-              {" "}
               🗼 내가 지낸 이집은 후기를 솔직하게 담을 수 있는 page 제공
             </div>
           </StCon>
         </StPart>
+
+        <StPart>
+          <ReactPlayer
+            url="img/mypage.mp4"
+            className="loginimg"
+            width="400px"
+            height="280px"
+            muted={true} //chrome정책으로 인해 자동 재생을 위해 mute 옵션을 true로 해주었다.
+            playing={true}
+            loop={true}
+          />
+          <StCon>
+            <div className="BigTitle">🏠 MyPage 페이지 </div>
+            <div>
+              🗼 내가 쓴 후기와, 게시물을 한눈에 확인 할 수 있는 page 제공
+            </div>
+          </StCon>
+        </StPart>
+
+        <StTech> 핵심 경험 </StTech>
+
+        <StExperience>
+          <div className="experience">
+            ◻ Redux-toolkit을 사용한 미니, 클론 프로젝트 개발👍
+            <br />
+            &nbsp;&nbsp; ◻ 전역 상태 관리 라이브러리로써 Redux를 사용할 환경을
+            구축하는 보일러플레이트(상용구) 작성 등의 과정이 생략이
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 가능하기에 사용
+            <br />
+            <br />
+            ◻ React-Query 를 이용한 프로젝트 개발 👍
+            <br />
+            &nbsp;&nbsp; ◻ 서버 사이드의 상태를 보다 용이하게 관리하기 위해 사용
+            <br />
+            &nbsp;&nbsp; ◻ 캐싱 된 데이터를 사용해 데이터 업데이트를 빠르게
+            보여줄 수 있으며 서버에 부담도 줄일 수 있다는 장점
+            <br />
+            <br />
+            ◻ React-Query의 장점 infiniteQuery 사용 👍
+            <br />
+            &nbsp;&nbsp; ◻ 일정한 데이터를 순차적으로 보여주기 위함
+            <br />
+            &nbsp;&nbsp; ◻ 데이터의 일부만 먼저 렌더링하고 차례로 보여줌으로써
+            최적화와 유저의 로딩 시간을 개선
+            <br />
+            <br />
+            ◻ 고객 피드백을 반영한 UX 개선 👍
+            <br />
+            &nbsp;&nbsp; ◻ Private Routes를 활용해 로그인이 필요한 페이지에서
+            강제진입 또는 뒤로가는 현상에서 특정 액션을 취할 수 있게 해결
+            <br />
+            &nbsp;&nbsp; ◻ useLocation을 활용해 하단스크롤 화면에서 페이지 이동
+            시 상단 스크롤로 이동 해결
+          </div>
+        </StExperience>
+
         <div style={{ height: "70px" }} />
       </StEzip>
     </>
@@ -155,7 +209,7 @@ const StTech = styled.div`
   color: white;
   font-size: 28px;
   font-weight: 600;
-  margin: 50px 0 0 20px;
+  margin: 70px 0 0 20px;
 `;
 
 const StPeriodBox = styled.div`
@@ -190,5 +244,17 @@ const StCon = styled.div`
     font-size: 25px;
     font-weight: 800;
     margin-bottom: 40px;
+  }
+`;
+
+const StExperience = styled.div`
+  background-color: rgba(255, 113, 175, 0.2);
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 20px;
+
+  .experience {
+    color: white;
+    font-size: 15px;
   }
 `;
