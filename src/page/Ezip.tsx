@@ -1,5 +1,6 @@
 import React, { useCallback } from "react";
 import styled from "styled-components";
+import ReactPlayer from "react-player";
 
 const Ezip = () => {
   const windowOpen = useCallback(() => {
@@ -57,24 +58,53 @@ const Ezip = () => {
         </StPeriodBox>
 
         <StTech> 주요 업무 </StTech>
+
         <StPart>
           <img
             alt="ezip"
             src={require("../ezipimage/kakaoLoginImage.png")}
             className="loginimg"
           />
-
-          <div> 여기는 상세 내용 </div>
+          <StCon>
+            <div className="BigTitle">🏠 로그인 페이지 </div>
+            <div> 🗼 카카오 로그인을 통해 유저의 피로도를 낮춤 </div>
+          </StCon>
         </StPart>
+
         <StPart>
           <img
-            alt="ezip"
-            src={require("../ezipimage/kakaoLoginImage.png")}
+            alt="community"
+            src={require("../ezipimage/community.png")}
             className="loginimg"
           />
-
-          <div> 여기는 상세 내용 </div>
+          <StCon>
+            <div className="BigTitle">🏠 Community 페이지 </div>
+            <div> 🗼 게시판을 이용해 자유로운 대화 제공</div>
+            <div> 🗼 솔직 담백한 다양한 정보 소통 제공 </div>
+          </StCon>
         </StPart>
+
+        <StPart>
+          <ReactPlayer
+            // alt="review"
+            // src={require("../ezipimage/review.mp4")}
+            url="img/review.mp4"
+            className="loginimg"
+            width="400px"
+            height="280px"
+            muted={true} //chrome정책으로 인해 자동 재생을 위해 mute 옵션을 true로 해주었다.
+            playing={true}
+            loop={true}
+          />
+          <StCon>
+            <div className="BigTitle">🏠 Review 페이지 </div>
+            <div>
+              {" "}
+              🗼 내가 지낸 이집은 후기를 솔직하게 담을 수 있는 page 제공
+            </div>
+          </StCon>
+        </StPart>
+        <div style={{ height: "70px" }} />
       </StEzip>
     </>
   );
@@ -142,10 +172,23 @@ const StPeriodBox = styled.div`
 
 const StPart = styled.div`
   display: flex;
+  margin-top: 25px;
 
   .loginimg {
-    width: 350px;
-    height: 230px;
-    border-radius: 20px;
+    width: 400px;
+    height: 280px;
+  }
+`;
+
+const StCon = styled.div`
+  width: 50%;
+  height: 150px;
+  margin: auto;
+  color: white;
+
+  .BigTitle {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 40px;
   }
 `;
