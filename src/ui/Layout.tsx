@@ -12,7 +12,7 @@ const StLayout = styled.div`
   max-width: 1200px;
   min-width: 800px;
   min-height: 100vh;
-  max-height: 830px;
+  max-height: 800px;
   margin: 0 auto;
   overflow-y: scroll;
   &::-webkit-scrollbar {

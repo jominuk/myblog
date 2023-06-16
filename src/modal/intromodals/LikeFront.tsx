@@ -4,7 +4,7 @@ import styled from "styled-components";
 const LikeFront: FC<any> = ({ 좋은이유 }) => {
   const closeModal = useCallback(() => {
     좋은이유(false);
-  }, []);
+  }, [좋은이유]);
 
   return (
     <ModalBackdrop>

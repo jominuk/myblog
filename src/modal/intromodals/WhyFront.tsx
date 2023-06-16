@@ -4,7 +4,7 @@ import styled from "styled-components";
 const WhyFront: FC<any> = ({ 왜개발자 }) => {
   const closeModal = useCallback(() => {
     왜개발자(false);
-  }, []);
+  }, [왜개발자]);
 
   return (
     <ModalBackdrop>

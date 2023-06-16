@@ -17,7 +17,7 @@ const Ezip = () => {
         <div className="Ezip"> 이집은 : ezip</div>
 
         <StPeriod>
-          <div className="Time"> 개발 기간 : 22. 12. 24 ~ 23. 02. 10 </div>
+          <div className="Time"> ✅ 개발 기간 : 22. 12. 24 ~ 23. 02. 10 </div>
           <br />
           <div className="Link" onClick={windowOpen}>
             Github 바로가기

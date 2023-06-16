@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Plan: FC<any> = ({ 앞으로계획 }) => {
   const closeModal = useCallback(() => {
     앞으로계획(false);
-  }, []);
+  }, [앞으로계획]);
 
   return (
     <ModalBackdrop>

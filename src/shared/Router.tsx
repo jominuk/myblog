@@ -6,6 +6,7 @@ import Skill from "src/page/Skill";
 import Project from "src/page/Project";
 import Introduce from "src/page/Introduce";
 import Ezip from "src/page/Ezip";
+import Slack from "src/page/Slack";
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
           <Route path="/project" element={<Project />} />
           <Route path="/" element={<Introduce />} />
           <Route path="/ezip" element={<Ezip />} />
+          <Route path="/slack" element={<Slack />} />
         </Routes>
       </Layout>
     </BrowserRouter>

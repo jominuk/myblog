@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ProCon: FC<any> = ({ 장점단점 }) => {
   const closeModal = useCallback(() => {
     장점단점(false);
-  }, []);
+  }, [장점단점]);
 
   return (
     <ModalBackdrop>
@@ -48,11 +48,6 @@ const ProCon: FC<any> = ({ 장점단점 }) => {
             극복하려는 행동으로 보여주고 있습니다.
           </StSpan>
         </StRigth>
-        {/* <StSpan>
-          
-          <br />
-         
-        </StSpan> */}
       </StContainer>
     </ModalBackdrop>
   );

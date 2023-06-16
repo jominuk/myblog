@@ -13,19 +13,19 @@ const Introduce = () => {
 
   const onHendleFront = useCallback(() => {
     왜개발자(!개발자);
-  }, [왜개발자]);
+  }, [왜개발자, 개발자]);
 
   const onHendleLike = useCallback(() => {
     좋은이유(!좋은);
-  }, [좋은이유]);
+  }, [좋은이유, 좋은]);
 
   const onHendlePros = useCallback(() => {
     장점단점(!장점);
-  }, [장점단점]);
+  }, [장점단점, 장점]);
 
   const onHendlePlan = useCallback(() => {
     앞으로계획(!앞으로);
-  }, []);
+  }, [앞으로계획, 앞으로]);
 
   return (
     <>
