@@ -16,7 +16,7 @@ const ProCon: FC<Props> = ({ onCloseModal }) => {
         <StCloseBut onClick={onCloseModal}>❌</StCloseBut>
         <StLeft>
           <StSpan>
-            장점
+            ◻ 장점
             <br />
             <br />
             열정과 추진력, 커뮤니케이션이 있습니다.
@@ -35,7 +35,7 @@ const ProCon: FC<Props> = ({ onCloseModal }) => {
         </StLeft>
         <StRigth>
           <StSpan>
-            단점
+            ◻ 단점
             <br />
             <br />
             단점으로 이해력 이 부족했습니다.
