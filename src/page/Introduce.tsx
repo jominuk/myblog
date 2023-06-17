@@ -11,22 +11,6 @@ const Introduce = () => {
   const [장점, 장점단점] = useState(false);
   const [앞으로, 앞으로계획] = useState(false);
 
-  const onHendleFront = useCallback(() => {
-    왜개발자(true);
-  }, [왜개발자]);
-
-  const onHendleLike = useCallback(() => {
-    좋은이유(!좋은);
-  }, [좋은이유, 좋은]);
-
-  const onHendlePros = useCallback(() => {
-    장점단점(!장점);
-  }, [장점단점, 장점]);
-
-  const onHendlePlan = useCallback(() => {
-    앞으로계획(!앞으로);
-  }, [앞으로계획, 앞으로]);
-
   const onCloseModal = useCallback(() => {
     왜개발자(false);
     좋은이유(false);
@@ -59,26 +43,44 @@ const Introduce = () => {
       <StWhy>Way❔</StWhy>
 
       <StIntroduce>
-        <StFront onClick={onHendleFront}>
+        <StFront
+          onClick={() => {
+            왜개발자(true);
+          }}
+        >
           나는 왜 <br />
           개발자 인가?
         </StFront>
         {개발자 && <WhyFront onCloseModal={onCloseModal} />}
 
-        <StFront onClick={onHendleLike}>
+        <StFront
+          onClick={() => {
+            좋은이유(!좋은);
+          }}
+        >
           개발이 좋은
           <br />
           이유
         </StFront>
         {좋은 && <LikeFront onCloseModal={onCloseModal} />}
 
-        <StFront onClick={onHendlePros}>
+        <StFront
+          onClick={() => {
+            장점단점(!장점);
+          }}
+        >
           개발자로써 <br />
           나의 장.단점
         </StFront>
         {장점 && <ProCon onCloseModal={onCloseModal} />}
 
-        <StFront onClick={onHendlePlan}> 앞으로의 계획 </StFront>
+        <StFront
+          onClick={() => {
+            앞으로계획(!앞으로);
+          }}
+        >
+          앞으로의 계획
+        </StFront>
         {앞으로 && <Plan onCloseModal={onCloseModal} />}
       </StIntroduce>
     </>
@@ -106,6 +108,7 @@ const StFont = styled.div`
 
   .coding {
     color: yellow;
+    font-size: 20px;
   }
 
   .join {

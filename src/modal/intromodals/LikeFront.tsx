@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from "react";
+import React, { FC } from "react";
 import styled from "styled-components";
 
 interface Props {
@@ -6,13 +6,9 @@ interface Props {
 }
 
 const LikeFront: FC<Props> = ({ onCloseModal }) => {
-  const stopPropagation = useCallback((e: any) => {
-    e.stopPropagation();
-  }, []);
-
   return (
     <ModalBackdrop onClick={onCloseModal}>
-      <StContainer onClick={stopPropagation}>
+      <StContainer onClick={(e) => e.stopPropagation()}>
         <StCloseBut onClick={onCloseModal}>❌</StCloseBut>
         <StLeft>
           <StSpan>
@@ -46,7 +42,8 @@ const LikeFront: FC<Props> = ({ onCloseModal }) => {
             중독으로 이끌고 있습니다.
             <br />
             <br />
-            이렇기에 저는 개발을 사랑할 수 있는 남자라고 생각합니다.
+            이렇기에 저는 <div className="Love">개발을 사랑할 수 있는 남자</div>
+            라고 생각합니다.
           </StSpan>
         </StRigth>
       </StContainer>
@@ -112,11 +109,16 @@ const StRigth = styled.div`
 `;
 
 const StSpan = styled.div`
-  display: flex;
   margin: auto;
   margin-top: 50px;
   width: 80%;
   color: black;
   font-size: 16px;
   font-weight: 900;
+
+  .Love {
+    display: inline;
+    color: red;
+    font-size: 17px;
+  }
 `;

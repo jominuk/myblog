@@ -1,11 +1,7 @@
-import React, { useCallback } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const Slack = () => {
-  const SlackGithub = useCallback(() => {
-    window.open("https://github.com/jominuk/Clone_Project-Slack");
-  }, []);
-
   return (
     <>
       <StEzip>
@@ -14,7 +10,12 @@ const Slack = () => {
         <StPeriod>
           <div className="Time">✅ 개발 기간 : 23. 04. 24 ~ 23. 05. 12 </div>
           <br />
-          <div className="Link" onClick={SlackGithub}>
+          <div
+            className="Link"
+            onClick={() => {
+              window.open("https://github.com/jominuk/Clone_Project-Slack");
+            }}
+          >
             Github 바로가기
           </div>
         </StPeriod>
@@ -48,6 +49,20 @@ const Slack = () => {
             className="LogoImage"
           />
         </StPeriodBox>
+
+        <StPicture>
+          <img
+            alt="Join"
+            src={require("../image/Join.png")}
+            className="Picture"
+          />
+
+          <img
+            alt="Chat"
+            src={require("../image/Chat.png")}
+            className="Picture"
+          />
+        </StPicture>
 
         <StTech> 핵심 경험 </StTech>
 
@@ -124,13 +139,6 @@ const StPeriod = styled.div`
     width: 120px;
     cursor: pointer;
   }
-
-  .Link2 {
-    color: white;
-    border-bottom: 1px solid powderblue;
-    width: 100px;
-    cursor: pointer;
-  }
 `;
 
 const StTech = styled.div`
@@ -149,6 +157,19 @@ const StPeriodBox = styled.div`
 
   .LogoImage {
     margin-left: 20px;
+  }
+`;
+
+const StPicture = styled.div`
+  display: flex;
+  justify-content: center;
+  color: white;
+
+  .Picture {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 50px 30px 0 30px;
   }
 `;
 

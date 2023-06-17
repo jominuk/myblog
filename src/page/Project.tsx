@@ -1,17 +1,9 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Project = () => {
   const navigate = useNavigate();
-
-  const onHendleImg = useCallback(() => {
-    navigate("/ezip");
-  }, [navigate]);
-
-  const onHendleSlack = useCallback(() => {
-    navigate("/slack");
-  }, [navigate]);
 
   return (
     <>
@@ -19,7 +11,9 @@ const Project = () => {
         <StImg
           alt="ezip"
           src={require("../image/ezip.png")}
-          onClick={onHendleImg}
+          onClick={() => {
+            navigate("/ezip");
+          }}
         />
 
         <StContent>
@@ -47,7 +41,9 @@ const Project = () => {
         <StImg
           alt="slack"
           src={require("../image/slack.png")}
-          onClick={onHendleSlack}
+          onClick={() => {
+            navigate("/slack");
+          }}
         />
 
         <StContent>
@@ -61,11 +57,27 @@ const Project = () => {
           </StTitle>
           <StLine />
           <StCont>
-            ☝️Clone-Project를 통한 Typescript 활용
+            ☝️ Clone-Project를 통한 Typescript 활용
             <br />
             <br />
-            ✌️Slack을 통해 SWR, socket.io 라이브러리 사용 경험
+            ✌️ Slack을 통해 SWR, socket.io 라이브러리 사용 경험
           </StCont>
+        </StContent>
+      </StProject>
+
+      <StProject>
+        <StImg
+          alt="solo"
+          src={require("../image/solo.png")}
+          onClick={() => {
+            navigate("/person");
+          }}
+        />
+
+        <StContent>
+          <StTitle>개인 웹 포트폴리오</StTitle>
+          <StLine />
+          <StCont>☝️ 개인 웹 포트폴리오 개발</StCont>
         </StContent>
       </StProject>
     </>

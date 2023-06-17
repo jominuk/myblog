@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from "react";
+import React, { FC } from "react";
 import styled from "styled-components";
 
 interface Props {
@@ -6,17 +6,13 @@ interface Props {
 }
 
 const ProCon: FC<Props> = ({ onCloseModal }) => {
-  const stopPropagation = useCallback((e: any) => {
-    e.stopPropagation();
-  }, []);
-
   return (
     <ModalBackdrop onClick={onCloseModal}>
-      <StContainer onClick={stopPropagation}>
+      <StContainer onClick={(e) => e.stopPropagation()}>
         <StCloseBut onClick={onCloseModal}>❌</StCloseBut>
         <StLeft>
           <StSpan>
-            ◻ 장점
+            ◻ <div className="pro"> 장점</div>
             <br />
             <br />
             열정과 추진력, 커뮤니케이션이 있습니다.
@@ -35,7 +31,7 @@ const ProCon: FC<Props> = ({ onCloseModal }) => {
         </StLeft>
         <StRigth>
           <StSpan>
-            ◻ 단점
+            ◻ <div className="pro"> 단점 </div>
             <br />
             <br />
             단점으로 이해력 이 부족했습니다.
@@ -115,11 +111,15 @@ const StRigth = styled.div`
 `;
 
 const StSpan = styled.div`
-  display: flex;
   margin: auto;
   margin-top: 50px;
   width: 80%;
   color: black;
   font-size: 16px;
   font-weight: 900;
+
+  .pro {
+    display: inline;
+    font-size: 18px;
+  }
 `;

@@ -1,16 +1,8 @@
-import React, { useCallback } from "react";
+import React from "react";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
 
 const Ezip = () => {
-  const windowOpen = useCallback(() => {
-    window.open("https://github.com/jominuk/Final_Project-ezip");
-  }, []);
-
-  const EzipOpen = useCallback(() => {
-    window.open("https://www.ezip.store/");
-  }, []);
-
   return (
     <>
       <StEzip>
@@ -19,11 +11,21 @@ const Ezip = () => {
         <StPeriod>
           <div className="Time"> ✅ 개발 기간 : 22. 12. 24 ~ 23. 02. 10 </div>
           <br />
-          <div className="Link" onClick={windowOpen}>
+          <div
+            className="Link"
+            onClick={() => {
+              window.open("https://github.com/jominuk/Final_Project-ezip");
+            }}
+          >
             Github 바로가기
           </div>
           <br />
-          <div className="Link2" onClick={EzipOpen}>
+          <div
+            className="Link2"
+            onClick={() => {
+              window.open("https://www.ezip.store/");
+            }}
+          >
             ezip 바로가기
           </div>
         </StPeriod>

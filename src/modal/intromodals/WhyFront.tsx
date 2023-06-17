@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from "react";
+import React, { FC } from "react";
 import styled from "styled-components";
 
 interface Props {
@@ -6,13 +6,9 @@ interface Props {
 }
 
 const WhyFront: FC<Props> = ({ onCloseModal }) => {
-  const stopPropagation = useCallback((e: any) => {
-    e.stopPropagation();
-  }, []);
-
   return (
     <ModalBackdrop onClick={onCloseModal}>
-      <StContainer onClick={stopPropagation}>
+      <StContainer onClick={(e) => e.stopPropagation()}>
         <StCloseBut onClick={onCloseModal}>❌</StCloseBut>
 
         <StLeft>
@@ -119,7 +115,6 @@ const StRigth = styled.div`
 `;
 
 const StSpan = styled.div`
-  display: flex;
   margin: auto;
   margin-top: 50px;
   width: 80%;
