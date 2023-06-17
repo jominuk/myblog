@@ -111,7 +111,7 @@ const StButton = styled.button`
 const StTitleContainer = styled.div`
   height: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   border-bottom: 1px solid white;
   color: white;
@@ -119,6 +119,7 @@ const StTitleContainer = styled.div`
 `;
 
 const StTitleButton = styled.button`
+  margin: 0 40px 0 40px;
   position: relative;
   font-size: 18px;
   background: none;
