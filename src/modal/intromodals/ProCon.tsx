@@ -1,15 +1,19 @@
 import React, { FC, useCallback } from "react";
 import styled from "styled-components";
 
-const ProCon: FC<any> = ({ 장점단점 }) => {
-  const closeModal = useCallback(() => {
-    장점단점(false);
-  }, [장점단점]);
+interface Props {
+  onCloseModal: () => void;
+}
+
+const ProCon: FC<Props> = ({ onCloseModal }) => {
+  const stopPropagation = useCallback((e: any) => {
+    e.stopPropagation();
+  }, []);
 
   return (
-    <ModalBackdrop>
-      <StContainer>
-        <StCloseBut onClick={closeModal}>❌</StCloseBut>
+    <ModalBackdrop onClick={onCloseModal}>
+      <StContainer onClick={stopPropagation}>
+        <StCloseBut onClick={onCloseModal}>❌</StCloseBut>
         <StLeft>
           <StSpan>
             장점

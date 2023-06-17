@@ -1,15 +1,20 @@
 import React, { FC, useCallback } from "react";
 import styled from "styled-components";
 
-const WhyFront: FC<any> = ({ 왜개발자 }) => {
-  const closeModal = useCallback(() => {
-    왜개발자(false);
-  }, [왜개발자]);
+interface Props {
+  onCloseModal: () => void;
+}
+
+const WhyFront: FC<Props> = ({ onCloseModal }) => {
+  const stopPropagation = useCallback((e: any) => {
+    e.stopPropagation();
+  }, []);
 
   return (
-    <ModalBackdrop>
-      <StContainer>
-        <StCloseBut onClick={closeModal}>❌</StCloseBut>
+    <ModalBackdrop onClick={onCloseModal}>
+      <StContainer onClick={stopPropagation}>
+        <StCloseBut onClick={onCloseModal}>❌</StCloseBut>
+
         <StLeft>
           <StSpan>
             개발자를 저의 최종의 목표로 선정했던 계기는 카페를 운영해오면서

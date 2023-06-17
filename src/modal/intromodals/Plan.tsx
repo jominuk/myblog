@@ -1,15 +1,19 @@
 import React, { FC, useCallback } from "react";
 import styled from "styled-components";
 
-const Plan: FC<any> = ({ 앞으로계획 }) => {
-  const closeModal = useCallback(() => {
-    앞으로계획(false);
-  }, [앞으로계획]);
+interface Props {
+  onCloseModal: () => void;
+}
+
+const Plan: FC<Props> = ({ onCloseModal }) => {
+  const stopPropagation = useCallback((e: any) => {
+    e.stopPropagation();
+  }, []);
 
   return (
-    <ModalBackdrop>
-      <StContainer>
-        <StCloseBut onClick={closeModal}>❌</StCloseBut>
+    <ModalBackdrop onClick={onCloseModal}>
+      <StContainer onClick={stopPropagation}>
+        <StCloseBut onClick={onCloseModal}>❌</StCloseBut>
         <StLeft>
           <StSpan>
             앞으로의 시간 동안 벽돌을 쌓을 예정입니다.

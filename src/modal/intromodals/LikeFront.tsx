@@ -1,15 +1,19 @@
 import React, { FC, useCallback } from "react";
 import styled from "styled-components";
 
-const LikeFront: FC<any> = ({ 좋은이유 }) => {
-  const closeModal = useCallback(() => {
-    좋은이유(false);
-  }, [좋은이유]);
+interface Props {
+  onCloseModal: () => void;
+}
+
+const LikeFront: FC<Props> = ({ onCloseModal }) => {
+  const stopPropagation = useCallback((e: any) => {
+    e.stopPropagation();
+  }, []);
 
   return (
-    <ModalBackdrop>
-      <StContainer>
-        <StCloseBut onClick={closeModal}>❌</StCloseBut>
+    <ModalBackdrop onClick={onCloseModal}>
+      <StContainer onClick={stopPropagation}>
+        <StCloseBut onClick={onCloseModal}>❌</StCloseBut>
         <StLeft>
           <StSpan>
             첫 시작은 검은 화면에서 무언가 작성하는 모습들 그것을 통해 사이트를

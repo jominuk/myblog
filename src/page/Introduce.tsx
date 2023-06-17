@@ -6,14 +6,14 @@ import ProCon from "src/modal/intromodals/ProCon";
 import Plan from "src/modal/intromodals/Plan";
 
 const Introduce = () => {
-  const [개발자, 왜개발자] = useState(false);
+  const [개발자, 왜개발자] = useState<boolean>(false);
   const [좋은, 좋은이유] = useState(false);
   const [장점, 장점단점] = useState(false);
   const [앞으로, 앞으로계획] = useState(false);
 
   const onHendleFront = useCallback(() => {
-    왜개발자(!개발자);
-  }, [왜개발자, 개발자]);
+    왜개발자(true);
+  }, [왜개발자]);
 
   const onHendleLike = useCallback(() => {
     좋은이유(!좋은);
@@ -26,6 +26,13 @@ const Introduce = () => {
   const onHendlePlan = useCallback(() => {
     앞으로계획(!앞으로);
   }, [앞으로계획, 앞으로]);
+
+  const onCloseModal = useCallback(() => {
+    왜개발자(false);
+    좋은이유(false);
+    장점단점(false);
+    앞으로계획(false);
+  }, []);
 
   return (
     <>
@@ -57,23 +64,23 @@ const Introduce = () => {
           나는 왜 <br />
           개발자 인가?
         </StFront>
-        {개발자 && <WhyFront 왜개발자={왜개발자} />}
+        {개발자 && <WhyFront onCloseModal={onCloseModal} />}
 
         <StFront onClick={onHendleLike}>
           개발이 좋은
           <br />
           이유
         </StFront>
-        {좋은 && <LikeFront 좋은이유={좋은이유} />}
+        {좋은 && <LikeFront onCloseModal={onCloseModal} />}
 
         <StFront onClick={onHendlePros}>
           개발자로써 <br />
           나의 장.단점
         </StFront>
-        {장점 && <ProCon 장점단점={장점단점} />}
+        {장점 && <ProCon onCloseModal={onCloseModal} />}
 
         <StFront onClick={onHendlePlan}> 앞으로의 계획 </StFront>
-        {앞으로 && <Plan 앞으로계획={앞으로계획} />}
+        {앞으로 && <Plan onCloseModal={onCloseModal} />}
       </StIntroduce>
     </>
   );

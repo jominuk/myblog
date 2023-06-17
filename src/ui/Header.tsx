@@ -1,9 +1,10 @@
-import React, { useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Header = () => {
   const navigate = useNavigate();
+  const [activeButton, setActiveButton] = useState("");
 
   const gitHandleClick = useCallback(() => {
     window.open("https://github.com/jominuk");
@@ -25,10 +26,14 @@ const Header = () => {
     navigate("project");
   }, [navigate]);
 
+  const handleButtonClick = useCallback((buttonName: any) => {
+    setActiveButton(buttonName);
+  }, []);
+
   return (
     <>
       <StContainer>
-        <h2>포트폴리오 😋</h2>
+        <h2>&nbsp;&nbsp;Portfolio &nbsp;🙋‍♂️</h2>
         <div>
           <StButton>
             <img
@@ -49,11 +54,35 @@ const Header = () => {
       </StContainer>
 
       <StTitleContainer>
-        <StTitleButton onClick={pageIntro}>Introduce</StTitleButton>
+        <StTitleButton
+          onClick={() => {
+            pageIntro();
+            handleButtonClick("introduce");
+          }}
+          className={activeButton === "introduce" ? "active" : ""}
+        >
+          Introduce
+        </StTitleButton>
 
-        <StTitleButton onClick={pageMove}>Skill</StTitleButton>
+        <StTitleButton
+          onClick={() => {
+            pageMove();
+            handleButtonClick("skill");
+          }}
+          className={activeButton === "skill" ? "active" : ""}
+        >
+          Skill
+        </StTitleButton>
 
-        <StTitleButton onClick={pageProject}>Projects</StTitleButton>
+        <StTitleButton
+          onClick={() => {
+            pageProject();
+            handleButtonClick("projects");
+          }}
+          className={activeButton === "projects" ? "active" : ""}
+        >
+          Projects
+        </StTitleButton>
       </StTitleContainer>
     </>
   );
@@ -82,7 +111,7 @@ const StButton = styled.button`
 const StTitleContainer = styled.div`
   height: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   border-bottom: 1px solid white;
   color: white;
@@ -90,17 +119,16 @@ const StTitleContainer = styled.div`
 `;
 
 const StTitleButton = styled.button`
-  display: inline-block;
-  margin: 0;
-  text-transform: uppercase;
   position: relative;
-  margin-left: 50px;
   font-size: 18px;
   background: none;
   border: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.4);
   text-transform: capitalize;
   cursor: pointer;
+  &:hover {
+    color: white;
+  }
   &:after {
     content: "";
     position: absolute;
@@ -116,5 +144,8 @@ const StTitleButton = styled.button`
   &:hover:after {
     transform: scaleX(1);
     transform: scale(1.3);
+  }
+  &.active {
+    color: white;
   }
 `;
