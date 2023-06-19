@@ -1,7 +1,12 @@
-import React from "react";
+import React, { FC } from "react";
 import styled from "styled-components";
 
-const Slack = () => {
+interface skilldata {
+  alt: string;
+  src: any;
+}
+
+const Slack: FC<skilldata> = () => {
   return (
     <>
       <StEzip>

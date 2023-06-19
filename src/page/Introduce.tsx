@@ -7,9 +7,9 @@ import Plan from "src/modal/intromodals/Plan";
 
 const Introduce = () => {
   const [개발자, 왜개발자] = useState<boolean>(false);
-  const [좋은, 좋은이유] = useState(false);
-  const [장점, 장점단점] = useState(false);
-  const [앞으로, 앞으로계획] = useState(false);
+  const [좋은, 좋은이유] = useState<boolean>(false);
+  const [장점, 장점단점] = useState<boolean>(false);
+  const [앞으로, 앞으로계획] = useState<boolean>(false);
 
   const onCloseModal = useCallback(() => {
     왜개발자(false);

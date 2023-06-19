@@ -5,8 +5,6 @@ export interface LayoutProps {
 }
 
 export interface skilldata {
-  alt: any;
+  alt: string;
   src: any;
-  title: string;
-  content: string;
 }

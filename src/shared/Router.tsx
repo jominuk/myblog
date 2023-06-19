@@ -15,12 +15,15 @@ const Router = () => {
       <Layout>
         <Header />
         <Routes>
-          <Route path="/skill" element={<Skill />} />
-          <Route path="/project" element={<Project />} />
+          <Route path="/skill" element={<Skill alt={""} src={undefined} />} />
+          <Route
+            path="/project"
+            element={<Project alt={""} src={undefined} />}
+          />
           <Route path="/" element={<Introduce />} />
-          <Route path="/ezip" element={<Ezip />} />
-          <Route path="/slack" element={<Slack />} />
-          <Route path="/person" element={<Person />} />
+          <Route path="/ezip" element={<Ezip alt={""} src={undefined} />} />
+          <Route path="/slack" element={<Slack alt={""} src={undefined} />} />
+          <Route path="/person" element={<Person alt={""} src={undefined} />} />
         </Routes>
       </Layout>
     </BrowserRouter>

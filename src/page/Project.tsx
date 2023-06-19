@@ -1,8 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { skilldata } from "src/type/type";
 
-const Project = () => {
+const Project: FC<skilldata> = () => {
   const navigate = useNavigate();
 
   return (

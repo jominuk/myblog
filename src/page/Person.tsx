@@ -1,7 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import styled from "styled-components";
+import { skilldata } from "src/type/type";
 
-const Person = () => {
+const Person: FC<skilldata> = () => {
   return (
     <>
       <StEzip>
