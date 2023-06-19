@@ -8,14 +8,12 @@ import Introduce from "src/page/Introduce";
 import Ezip from "src/page/Ezip";
 import Slack from "src/page/Slack";
 import Person from "src/page/Person";
-import ScrollToTop from "./ScrollToTop";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Layout>
         <Header />
-        <ScrollToTop />
         <Routes>
           <Route path="/skill" element={<Skill />} />
           <Route path="/project" element={<Project />} />
