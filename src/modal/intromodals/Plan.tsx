@@ -21,16 +21,20 @@ const Plan: FC<Props> = ({ onCloseModal }) => {
             <br />
             그렇기에 지금까지 놓쳤던, 이해가 안되었던 부분들을 채워나가며 튼튼한
             기초를 만들 계획입니다.
+            <br />
+            <br />
+            그러기 위해선 React의 Hook과 개념적인 요소들, JS의 기초 들을
+            공부하면서 단단한 기초를 만들려고 합니다.
           </StSpan>
         </StLeft>
         <StRigth>
           <StSpan>
-            그러기 위해선 React의 Hook과 개념적인 요소들, JS의 기초 들을
-            공부하면서 단단한 기초를 만들려고 합니다.
+            또한 React의 중요한 재사용성이 높은 Component를 연습하면서 좋은
+            코드를 위해 끊임 없이 연구 하고 생각한 이후
             <br />
-            <br />그 이후 강력한 생태계를 가지고 있는 Typescript를 공부해 저
-            혼자만의 프로젝트에 적용해 보면서 실습을 이어나가 실전에도 도움이 될
-            수 있게 공부할 계획입니다.
+            <br /> 강력한 생태계를 가지고 있는 Typescript를 공부해 저 혼자만의
+            프로젝트에 적용해 보면서 실습을 이어나가 실전에도 도움이 될 수 있게
+            공부할 계획입니다.
           </StSpan>
         </StRigth>
       </StContainer>
@@ -97,8 +101,8 @@ const StRigth = styled.div`
 
 const StSpan = styled.div`
   margin: auto;
-  margin-top: 120px;
-  width: 60%;
+  margin-top: 100px;
+  width: 70%;
   color: black;
   font-size: 16px;
   font-weight: 900;
