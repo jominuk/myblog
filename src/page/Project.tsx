@@ -81,6 +81,24 @@ const Project: FC<skilldata> = () => {
           <StCont>☝️ 개인 웹 포트폴리오 개발</StCont>
         </StContent>
       </StProject>
+
+      <StProject>
+        <StImg
+          alt="ChatAi"
+          src={require("../image/ChatAi.png")}
+          onClick={() => {
+            navigate("/ai");
+          }}
+        />
+
+        <StContent>
+          <StTitle> Ai Chat </StTitle>
+          <StLine />
+          <StCont>☝️ Open Ai를 활용한 Chat 개발 경험</StCont>
+        </StContent>
+      </StProject>
+
+      <div style={{ height: "50px" }} />
     </>
   );
 };
