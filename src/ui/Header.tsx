@@ -14,16 +14,16 @@ const Header = () => {
     window.open("https://minuk22.tistory.com/");
   }, []);
 
-  const pageIntro = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
-
   const pageMove = useCallback(() => {
-    navigate("/skill");
+    navigate("");
   }, [navigate]);
 
   const pageProject = useCallback(() => {
     navigate("project");
+  }, [navigate]);
+
+  const pageIntro = useCallback(() => {
+    navigate("introduce");
   }, [navigate]);
 
   const handleButtonClick = useCallback((buttonName: any) => {
@@ -56,16 +56,6 @@ const Header = () => {
       <StTitleContainer>
         <StTitleButton
           onClick={() => {
-            pageIntro();
-            handleButtonClick("introduce");
-          }}
-          className={activeButton === "introduce" ? "active" : ""}
-        >
-          Introduce
-        </StTitleButton>
-
-        <StTitleButton
-          onClick={() => {
             pageMove();
             handleButtonClick("skill");
           }}
@@ -82,6 +72,16 @@ const Header = () => {
           className={activeButton === "projects" ? "active" : ""}
         >
           Projects
+        </StTitleButton>
+
+        <StTitleButton
+          onClick={() => {
+            pageIntro();
+            handleButtonClick("introduce");
+          }}
+          className={activeButton === "introduce" ? "active" : ""}
+        >
+          Introduce
         </StTitleButton>
       </StTitleContainer>
     </>

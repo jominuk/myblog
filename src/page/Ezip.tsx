@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
 import { skilldata } from "src/type/type";
+import EzipDetail from "src/components/EzipDetail";
 
 const Ezip: FC<skilldata> = () => {
   return (
@@ -60,7 +61,7 @@ const Ezip: FC<skilldata> = () => {
           />
         </StPeriodBox>
 
-        <StTech> 주요 업무 </StTech>
+        <StTech> 😎 맡은 주요 업무 </StTech>
 
         <StPart>
           <img
@@ -161,6 +162,10 @@ const Ezip: FC<skilldata> = () => {
           </div>
         </StExperience>
 
+        <StTech> 🪡 트러블 슈팅 </StTech>
+
+        <EzipDetail />
+
         <div style={{ height: "70px" }} />
       </StEzip>
     </>
@@ -172,12 +177,14 @@ export default Ezip;
 const StEzip = styled.div`
   margin: auto;
   width: 80%;
+  min-width: 850px;
   height: 100%;
 
   .Ezip {
     color: white;
     margin: 0 0 30px 20px;
-    font-size: 28px;
+    font-size: 25px;
+    min-width: 850px;
     font-weight: 600;
   }
 `;
@@ -210,13 +217,14 @@ const StPeriod = styled.div`
 
 const StTech = styled.div`
   color: white;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 600;
-  margin: 70px 0 0 20px;
+  margin: 50px 0 0 20px;
 `;
 
 const StPeriodBox = styled.div`
   margin-top: 30px;
+  min-width: 850px;
   background-color: rgba(255, 113, 175, 0.2);
   padding: 30px;
   border-radius: 20px;
@@ -224,6 +232,12 @@ const StPeriodBox = styled.div`
 
   .LogoImage {
     margin-left: 20px;
+  }
+
+  .small {
+    display: inline;
+    color: #03bf8a;
+    font-weight: 800;
   }
 `;
 
@@ -253,6 +267,7 @@ const StCon = styled.div`
 const StExperience = styled.div`
   background-color: rgba(255, 113, 175, 0.2);
   padding: 30px;
+  min-width: 850px;
   border-radius: 20px;
   margin-top: 20px;
 

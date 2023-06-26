@@ -98,10 +98,13 @@ const StEzip = styled.div`
   margin: auto;
   width: 80%;
   height: 100%;
+  min-width: 850px;
+
   .Ezip {
     color: white;
     margin: 0 0 30px 20px;
-    font-size: 28px;
+    min-width: 850px;
+    font-size: 25px;
     font-weight: 600;
   }
 `;
@@ -135,13 +138,14 @@ const StPeriod = styled.div`
 
 const StTech = styled.div`
   color: white;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 600;
   margin: 50px 0 0 20px;
 `;
 
 const StPeriodBox = styled.div`
   margin-top: 30px;
+  min-width: 850px;
   background-color: rgba(255, 113, 175, 0.2);
   padding: 30px;
   border-radius: 20px;
@@ -170,6 +174,7 @@ const StExperience = styled.div`
   padding: 30px;
   border-radius: 20px;
   margin-top: 20px;
+  min-width: 850px;
 
   .experience {
     color: white;

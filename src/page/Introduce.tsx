@@ -31,7 +31,7 @@ const Introduce = () => {
           개발자의 교육을 통해 제가 만든 첫 프로젝트를 직접 유저에게 런칭 하고
           난 희열감은 감히 잊을 수 없습니다. <br />
           또한 프로젝트 제작에 참여했다는 생각에 더 큰 감동으로 저를 &nbsp;
-          <div className="join">코드 중독</div>&nbsp; 으로 이끌고 있습니다.
+          <div className="join"> 개발자 </div>&nbsp; 로 이끌고 있습니다.
           <br />
           <br />
           끊임없이 공부하고 성실하게 쌓은 지식으로 실질적인 도움이 되는 개발자로
@@ -113,7 +113,7 @@ const StFont = styled.div`
 
   .join {
     display: inline;
-    color: #f64a4a;
+    color: #bcff3e;
     font-size: 17px;
   }
 `;

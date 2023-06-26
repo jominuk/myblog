@@ -71,12 +71,13 @@ export default Person;
 
 const StEzip = styled.div`
   margin: auto;
+
   width: 80%;
   height: 100%;
   .Ezip {
     color: white;
     margin: 0 0 30px 20px;
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 600;
   }
 `;
@@ -110,7 +111,7 @@ const StPeriod = styled.div`
 
 const StTech = styled.div`
   color: white;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 600;
   margin: 50px 0 0 20px;
 `;

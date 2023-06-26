@@ -1,15 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import { LayoutProps } from "src/type/type";
-import { useLocation } from "react-router-dom";
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
   return <StLayout>{children}</StLayout>;
 };
 

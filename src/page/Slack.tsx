@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import SlackDetail from "src/components/SlackDetail";
 import styled from "styled-components";
 
 interface skilldata {
@@ -106,6 +107,10 @@ const Slack: FC<skilldata> = () => {
           </div>
         </StExperience>
 
+        <StTech> 🪡 트러블 슈팅 </StTech>
+
+        <SlackDetail />
+
         <div style={{ height: "70px" }} />
       </StEzip>
     </>
@@ -122,7 +127,7 @@ const StEzip = styled.div`
   .Ezip {
     color: white;
     margin: 0 0 30px 20px;
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 600;
   }
 `;
@@ -148,7 +153,7 @@ const StPeriod = styled.div`
 
 const StTech = styled.div`
   color: white;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 600;
   margin: 50px 0 0 20px;
 `;
