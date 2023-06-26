@@ -70,7 +70,7 @@ const Slack: FC<skilldata> = () => {
           />
         </StPicture>
 
-        <StTech> 핵심 경험 </StTech>
+        <StTech> 🔥 핵심 경험 </StTech>
 
         <StExperience>
           <div className="experience">

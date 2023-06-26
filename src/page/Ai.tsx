@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 import { skilldata } from "src/type/type";
+import AiDetail from "src/components/AiDetail";
 
 const Ai: FC<skilldata> = () => {
   return (
@@ -70,7 +71,7 @@ const Ai: FC<skilldata> = () => {
           ✌️ GPT 에서 제공하는 OpenAi API 서비스로 제작
         </StPeriodBox>
 
-        <StTech> 핵심 경험 </StTech>
+        <StTech> 🔥핵심 경험 </StTech>
 
         <StExperience>
           <div className="experience">
@@ -78,13 +79,20 @@ const Ai: FC<skilldata> = () => {
             개발 👍
             <br />
             <br />
+            ◻ chat-GPT와 비슷한 채팅을 구현 👍
+            <br />
+            <br />
             ◻ 전역 상태 관리를 위한 useContext 사용 👍
             <br />
             <br />
-            ◻ TypeScript를 사용함으로 한층 더 업그레이드 된 코드 👍
+            ◻ TypeScript를 사용함으로 한층 더 업그레이드 지식 👍
             <br />
           </div>
         </StExperience>
+
+        <StTech> 🪡 트러블 슈팅 </StTech>
+
+        <AiDetail />
 
         <div style={{ height: "100px" }}></div>
       </StEzip>

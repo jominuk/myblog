@@ -124,7 +124,7 @@ const Ezip: FC<skilldata> = () => {
           </StCon>
         </StPart>
 
-        <StTech> 핵심 경험 </StTech>
+        <StTech> 🔥 핵심 경험 </StTech>
 
         <StExperience>
           <div className="experience">

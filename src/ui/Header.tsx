@@ -33,7 +33,7 @@ const Header = () => {
   return (
     <>
       <StContainer>
-        <h2>&nbsp;&nbsp;Portfolio &nbsp;🙋‍♂️</h2>
+        <h2>&nbsp;&nbsp;Portfolio </h2>
         <div>
           <StButton>
             <img

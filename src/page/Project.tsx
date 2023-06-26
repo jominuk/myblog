@@ -28,12 +28,12 @@ const Project: FC<skilldata> = () => {
           </StTitle>
           <StLine />
           <StCont>
-            ☝️실제 거주 해 본 사람들이 작성하는 찐 리뷰 플렛폼🏘️
+            ☝️실제 거주 해 본 사람들이 작성하는 찐 리뷰 플렛폼
             <br />
             <br />
             ✌️집주인도, 중개사도 모르는 진짜 후기를 알려주는
             <br />
-            &nbsp; &nbsp; 플렛폼🏘️
+            &nbsp; &nbsp; 플렛폼
           </StCont>
         </StContent>
       </StProject>
@@ -68,22 +68,6 @@ const Project: FC<skilldata> = () => {
 
       <StProject>
         <StImg
-          alt="solo"
-          src={require("../image/solo.png")}
-          onClick={() => {
-            navigate("/person");
-          }}
-        />
-
-        <StContent>
-          <StTitle>개인 웹 포트폴리오</StTitle>
-          <StLine />
-          <StCont>☝️ 개인 웹 포트폴리오 개발</StCont>
-        </StContent>
-      </StProject>
-
-      <StProject>
-        <StImg
           alt="ChatAi"
           src={require("../image/ChatAi.png")}
           onClick={() => {
@@ -95,6 +79,22 @@ const Project: FC<skilldata> = () => {
           <StTitle> Ai Chat </StTitle>
           <StLine />
           <StCont>☝️ Open Ai를 활용한 Chat 개발 경험</StCont>
+        </StContent>
+      </StProject>
+
+      <StProject>
+        <StImg
+          alt="solo"
+          src={require("../image/solo.png")}
+          onClick={() => {
+            navigate("/person");
+          }}
+        />
+
+        <StContent>
+          <StTitle>개인 웹 포트폴리오</StTitle>
+          <StLine />
+          <StCont>☝️ 개인 웹 포트폴리오 개발</StCont>
         </StContent>
       </StProject>
 

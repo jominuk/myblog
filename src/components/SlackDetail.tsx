@@ -11,6 +11,7 @@ const SlackDetail = () => {
         &nbsp;&nbsp;&nbsp;a. 첫 로그인 이 후 API 요청을 한 뒤 또 같은 요청을
         보내고 있던 문제
         <br />
+        <div style={{ height: "8px" }} />
         &nbsp;&nbsp;&nbsp;b. Socket.io로 채팅을 구현한 뒤 채팅 입력 후 화면에
         표시될 때 응답 받는 시간 때문에 채팅 지연 문제로
         <br />
@@ -27,7 +28,7 @@ const SlackDetail = () => {
         <br />
         <br />
         3. 해결
-        <br />
+        <div style={{ height: "8px" }} />
         &nbsp;&nbsp;&nbsp;a. <div className="small">"revalidate"</div> 의 활용은
         특정 버튼 클릭이나 양식 제출과 같은 사용자 작업에 대한 응답일 때 사용
         <br />
@@ -57,7 +58,7 @@ const SlackDetail = () => {
         <br />
         <br />
         3. 해결
-        <br />
+        <div style={{ height: "8px" }} />
         &nbsp;&nbsp;&nbsp;a. 기존의
         <div className="small">
           [&#123;id:1&#125;, &#123;id:2&#125;, &#123;id:3&#125;]
@@ -69,6 +70,7 @@ const SlackDetail = () => {
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 상태로 받아올 수 있게 로직 수정
         <br />
+        <div style={{ height: "8px" }} />
         &nbsp;&nbsp;&nbsp;b. <div className="small">flat( ) </div> 함수를 사용해
         기존의 Spread연산자인 …data를 data.flat( )로 수정해 중첩 배열을 평탄화
       </StPeriodBox>
@@ -80,10 +82,12 @@ const SlackDetail = () => {
         &nbsp;&nbsp;&nbsp;a. 하나의 방에서 채팅을 하고 난 뒤 다른 방에서 채팅을
         하게 되면 처음 채팅했던 방에서도 내가 쓴 글이 나타나는 문제
         <br />
+        <div style={{ height: "8px" }} />
         &nbsp;&nbsp;&nbsp;b. 채팅은 올바르게 입력되고 있지만 서버 쪽으로 data를
         보내지 못하고 있던 문제
         <br />
-        &nbsp;&nbsp;&nbsp;c. 연결 과정에서 네트워크 창에{" "}
+        <div style={{ height: "8px" }} />
+        &nbsp;&nbsp;&nbsp;c. 연결 과정에서 네트워크 창에
         <div className="small">polling</div> 에러를 보내고 있는 문제
         <br />
         <br />
@@ -92,26 +96,30 @@ const SlackDetail = () => {
         &nbsp;&nbsp;&nbsp;a. 연결을 끊는 과정에서 기존에 방에 있던 data들이
         존재하고 있는게 보여 이 부분을 정리해주는 로직이 필요
         <br />
-        &nbsp;&nbsp;&nbsp;b. socket.io가 연결이 되어 있다면{" "}
+        <div style={{ height: "8px" }} />
+        &nbsp;&nbsp;&nbsp;b. socket.io가 연결이 되어 있다면
         <div className="small">sendBuffer</div>와
         <div className="small">receiveBuffer</div>의 내부 배열이 비어있어야
         data를 보낼 수 있음을 발견
         <br />
+        <div style={{ height: "8px" }} />
         &nbsp;&nbsp;&nbsp;c. 구 버전의 Explorer은 websocket이 없는 브라우저가
         존재해 그렇기 위해 먼저 http 요청을 보내고 있는 것을 발견
         <br />
         <br />
         3. 해결
-        <br />
+        <div style={{ height: "8px" }} />
         &nbsp;&nbsp;&nbsp;a. sockets으로 만든 함수에 객체를 만들고 delete를
         활용해 정리하고 이 후 <div className="small">disconnect( )</div>을
         활용해
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 기존의 공간과 연결을 끊어 줌으로 해결
         <br />
+        <div style={{ height: "8px" }} />
         &nbsp;&nbsp;&nbsp;b. back서버와 front서버와의
         <div className="small">소켓.io의 버전을 동일</div>하게 맞춤으로 해결
         <br />
+        <div style={{ height: "8px" }} />
         &nbsp;&nbsp;&nbsp;c. 현재 사용하고 있는 크롬 버전에는 websocket을 바로
         사용할 수 있기에 polling를 하지 않고
         <br />
