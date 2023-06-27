@@ -84,6 +84,38 @@ const Project: FC<skilldata> = () => {
 
       <StProject>
         <StImg
+          alt="mainUeat"
+          src={require("../image/mainUeat.png")}
+          onClick={() => {
+            navigate("/eat");
+          }}
+        />
+
+        <StContent>
+          <StTitle>
+            <img
+              className="ueatlogo"
+              alt="ueat"
+              src={require("../image/ueat.png")}
+            />
+            UEAT
+            <br />
+            (Mini-Project)
+          </StTitle>
+          <StLine />
+          <StCont>
+            ☝️ 항상 무엇을 먹고 싶어하는지 선택하기 힘들어 하신 분
+            <br />
+            <br />
+            ✌️ 이러한 분들을 위해 카테고리 별로 다양하게 준비한
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;세계 음식을 골라주는 플렛폼
+          </StCont>
+        </StContent>
+      </StProject>
+
+      <StProject>
+        <StImg
           alt="solo"
           src={require("../image/solo.png")}
           onClick={() => {
@@ -136,7 +168,14 @@ const StTitle = styled.h1`
 
   .logo {
     width: 50px;
+    height: 50px;
     margin-right: 40px;
+  }
+
+  .ueatlogo {
+    width: 50px;
+    height: 50px;
+    margin: 22px 40px 0 0;
   }
 `;
 

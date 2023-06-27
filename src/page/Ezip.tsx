@@ -91,7 +91,6 @@ const Ezip: FC<skilldata> = () => {
         <StPart>
           <ReactPlayer
             url="img/review.mp4"
-            className="loginimg"
             width="400px"
             height="280px"
             muted={true} //chrome정책으로 인해 자동 재생을 위해 mute 옵션을 true로 해주었다.
@@ -109,10 +108,9 @@ const Ezip: FC<skilldata> = () => {
         <StPart>
           <ReactPlayer
             url="img/mypage.mp4"
-            className="loginimg"
             width="400px"
             height="280px"
-            muted={true} //chrome정책으로 인해 자동 재생을 위해 mute 옵션을 true로 해주었다.
+            muted={true}
             playing={true}
             loop={true}
           />

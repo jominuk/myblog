@@ -9,6 +9,7 @@ import Ezip from "src/page/Ezip";
 import Slack from "src/page/Slack";
 import Person from "src/page/Person";
 import Ai from "src/page/Ai";
+import Eeat from "src/page/Ueat";
 
 const Router = () => {
   return (
@@ -26,6 +27,7 @@ const Router = () => {
           <Route path="/slack" element={<Slack alt={""} src={undefined} />} />
           <Route path="/person" element={<Person alt={""} src={undefined} />} />
           <Route path="/ai" element={<Ai alt={""} src={undefined} />} />
+          <Route path="/eat" element={<Eeat />} />
         </Routes>
       </Layout>
     </BrowserRouter>
