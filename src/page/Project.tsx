@@ -50,11 +50,13 @@ const Project: FC<skilldata> = () => {
         <StContent>
           <StTitle>
             <img
-              className="logo"
+              className="ueatlogo"
               alt="슬랙"
               src={require("../image/슬랙.png")}
             />
             Slack
+            <br />
+            (Clone-Project)
           </StTitle>
           <StLine />
           <StCont>
